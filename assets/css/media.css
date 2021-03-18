@@ -196,7 +196,7 @@
 
   .nav__list {
     display: block;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     width: 100%;
