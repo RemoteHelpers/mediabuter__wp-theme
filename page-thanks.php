@@ -24,9 +24,9 @@
             <div class="logo-holder"><img src="<?php bloginfo( template_url ); ?>/assets/img/desktop/logo.svg" alt=""></div>
             <div class="nav__list-holder">
               <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link" href="index.html#expec">О вакансии</a></li>
-                <li class="nav__item"><a class="nav__link" href="index.html#cond">О компании</a></li>
-                <li class="nav__item"><a class="nav__link button" href="index.html#form">Отправить заявку</a></li>
+                <li class="nav__item"><a class="nav__link" href="http://mediabuyer/#expec">О вакансии</a></li>
+                <li class="nav__item"><a class="nav__link" href="http://mediabuyer/#cond">О компании</a></li>
+                <li class="nav__item"><a class="nav__link button" href="http://mediabuyer/#form">Отправить заявку</a></li>
               </ul>
             </div>
             <div class="menu-icon-wrapper">
@@ -36,7 +36,7 @@
           <div class="thanks-content">
             <h1 class="thanks-content__title"><?php the_field('thanks-content__title') ?></h1>
             <p class="thanks-content__text"><?php the_field('thanks-content__text') ?></p>
-            <a href="index.html" class="thanks-content__link button button--arrow-left">Назад</a>
+            <a href="http://mediabuyer/" class="thanks-content__link button button--arrow-left">Назад</a>
           </div>
         </div>
       </header>

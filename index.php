@@ -5,15 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php bloginfo( 'description' ); ?></title>
-  <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="./css/main.css"> -->
-  <!-- <link rel="stylesheet" href="./css/media.css"> -->
-
+ 
   <?php wp_head(); ?>
 </head>
 <body>
+<script type="text/javascript">let submitted = false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="
+    if (submitted) {window.location='http:mediabuyer/thanks/'}"></iframe>
   <header class="header none" id="header">
     <div class="content-wrapper">
       <img class="header__rectangle" src="<?php bloginfo( template_url ); ?>/assets/img/desktop/header-rec.png" alt="">
@@ -63,8 +63,7 @@
       <div class="container container--req">
         <h2 class="req__title"><?php the_field('req__title') ?></h2>
         <div class="req__content">
-          <!-- <ul class="req__list"> -->
-            <!-- <li class="req__item"> -->
+        
             <?php
               $featured_posts = get_field('req__item');
               if( $featured_posts ): ?>
@@ -80,18 +79,7 @@
                   <?php 
                   wp_reset_postdata(); ?>
               <?php endif; ?>
-              <!-- <img src="./img/desktop/req-icons/new.svg" alt="">
-              <p>отсутсвие опыта работы - не проблема</p> -->
-            <!-- </li> -->
-            <!-- <li class="req__item">
-              <img src="./img/desktop/req-icons/en.svg" alt="">
-              <p>обязательно знание английского</p>
-            </li> -->
-            <!-- <li class="req__item">
-              <img src="./img/desktop/req-icons/ad.svg" alt="">
-              <p>важны коммуникабельность, знания в рекламе и контенте</p>
-            </li> -->
-          <!-- </ul> -->
+
           <div class="req__desc">
             <p class="req__text"><?php the_field('req__point-1') ?></p>
             <p class="req__text"><?php the_field('req__point-2') ?></p>
@@ -194,20 +182,20 @@
             <div class="content-holder">
             <h2 class="response__title"><?php the_field('response__title') ?></h2>
               <p class="response__text"><?php the_field('response__text') ?></p>
-              <form class="response__form">
+              <form class="response__form" role="form" action="https://docs.google.com/forms/u/1/d/e/1FAIpQLScB3AUozA8edt8XLEV6-c4BgFfQ6o0gmc2TtYWaig_sLpxM9w/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
                 <p class="response__input">
                   <label for="name">Имя</label>
-                  <input type="text" id="name">
+                  <input type="text" id="name" data-rule="name" name="entry.1010591331">
                 </p>
                 <p class="response__input">
                   <label for="tel">Телефон/Viber</label>
-                  <input type="text" id="tel">
+                  <input type="text" id="tel" data-rule="phone" name="entry.212720642">
                 </p>
                 <p class="response__input">
                   <label for="email">Email</label>
-                  <input type="text" id="email">
+                  <input type="text" id="email" data-rule="email" name="entry.1273685221">
                 </p>
-                <a href="thanks.html" class="ad__link button button--arrow">Откликнуться</a>
+                <button class="button ad__link button--arrow" type="submit">Откликнуться</button>
               </form>
             </div>
           </div>

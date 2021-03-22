@@ -90,6 +90,7 @@ img {
   padding: 17px 30px;
   background-image: linear-gradient(90deg, #A060D3 0%, #EF1867 100%);
   border-radius: 32px;
+  border: none;
 }
 
 .button--arrow {
